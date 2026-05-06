@@ -321,7 +321,7 @@ class JellyHandler(BaseHTTPRequestHandler):
             )
 
         content = (
-            f"<p style='color:#aaa;'>Risultati per "<b>{html.escape(q)}</b>": {len(items)} file</p>"
+            f"<p style='color:#aaa;'>Risultati per '<b>{html.escape(q)}</b>': {len(items)} file</p>"
             f"<section class='grid'>{''.join(rows) if rows else '<p>Nessun risultato.</p>'}</section>"
         )
         return _page(f'Ricerca: {q}', self._common_header(q), content)
